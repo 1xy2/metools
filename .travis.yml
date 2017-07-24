@@ -20,15 +20,13 @@ script:
 
 after_script:
   - npm run build
-  - ls
-  - ls ./dist
   - cd dist
   - git init
   - git config user.name "yimo"
   - git config user.email "1280160831@qq.com"
-  - git add .
+  - git add *
   - git commit -m "Update blogs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 # E: Build LifeCycle
 
 branches:
