@@ -71,7 +71,7 @@ export default {
                 offset:'rb',
                 area: ['400px', '500px'],
                 title:'我是谁？',
-                content:'/static/msg.html'});
+                content:'./static/msg.html'});
         }
     },
     created(){
