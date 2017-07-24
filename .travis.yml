@@ -17,10 +17,11 @@ before_script:
 
 
 script:
-  - npm run build
+  - ll -a
 
 
 after_script:
+  - npm run build
   - cd ./dist
   - git init
   - git config user.name "yimo"
