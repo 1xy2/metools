@@ -1,5 +1,6 @@
 language: node_js
-node_js: stable
+node_js: 
+  - "6"
 
 # Travis-CI Caching
 cache:
@@ -12,7 +13,7 @@ install:
   - npm install
 
 before_script:
- # - npm install -g gulp
+ # - npm install -g vue-cli
 
 
 script:
@@ -20,8 +21,7 @@ script:
 
 
 after_script:
-  - rm ./dist /s /q
-  - mkdir dist
+  - ll
   - cd ./dist
   - git init
   - git config user.name "yimo"
